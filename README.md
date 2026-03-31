@@ -133,10 +133,33 @@ Top-Nᵤ = argsort(Xu, descending)[:N]
 ## 📈 Performance Metrics
 
 ### 🔹 Hit Ratio (HR@N)
-Measures whether the correct item appears in Top-N recommendations.
 
-### 🔹 ARHR@N
+Measures whether the correct item appears in the Top-N recommendations.
+
+HR@N = (Number of Hits) / (Total Users)
+
+Where:
+- A "hit" occurs if the test item is present in the Top-N list
+
+---
+
+### 🔹 Average Reciprocal Hit Rank (ARHR@N)
+
 Rewards higher-ranked correct recommendations.
+
+ARHR@N = (1 / |U|) × Σ (1 / rankᵤ)
+
+Where:
+- U → Set of users  
+- rankᵤ → Position of the correct item in Top-N list for user u  
+- If item is not in Top-N, contribution = 0  
+
+---
+
+### 🔹 Interpretation
+
+- Higher HR → better coverage  
+- Higher ARHR → better ranking quality  
 
 ## 📊 Results
 
