@@ -17,7 +17,7 @@ Recommender systems are widely used in platforms like Netflix, Amazon, and Spoti
 - LogDet surrogate instead of Nuclear Norm  
 - ADMM optimization for efficient solving  
 - Handles highly sparse datasets  
-- Evaluated using HR and ARHR
+- Evaluated using HR@N and ARHR@N
 
 ## 👥 Team C-8
 
@@ -47,7 +47,7 @@ A[Input Matrix] --> B[Mask]
 B --> C[ADMM Optimization]
 C --> D[Completed Matrix]
 D --> E[Top-N Recommendation]
-E --> F[Evaluation (HR@N,ARHR@N)]
+E --> F[Evaluation (HR/ARHR)]
 
 ```
 ---
